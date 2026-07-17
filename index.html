@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Play Andrew's Rock, Paper, Scissors game right in your browser."
+    >
+    <meta name="theme-color" content="#17132f">
+    <title>Andrew's Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="game-card" aria-labelledby="game-title">
+        <header class="game-header">
+          <p class="eyebrow">Andrew's game</p>
+          <h1 id="game-title">Rock, Paper, Scissors</h1>
+          <p class="intro">Pick your move and challenge the computer.</p>
+        </header>
+
+        <div class="scoreboard" aria-label="Match score">
+          <div class="score score--player">
+            <span class="score__label">You</span>
+            <strong class="score__number" id="player-score">0</strong>
+          </div>
+          <div class="scoreboard__divider" aria-hidden="true">:</div>
+          <div class="score score--computer">
+            <span class="score__label">Computer</span>
+            <strong class="score__number" id="computer-score">0</strong>
+          </div>
+        </div>
+
+        <div class="arena" aria-label="Current round">
+          <div class="move-card move-card--player" id="player-card">
+            <span class="move-card__label">Your move</span>
+            <span class="move-card__icon" id="player-icon" aria-hidden="true">?</span>
+            <strong id="player-choice">Choose below</strong>
+          </div>
+
+          <span class="versus" aria-hidden="true">VS</span>
+
+          <div class="move-card move-card--computer" id="computer-card">
+            <span class="move-card__label">Computer</span>
+            <span class="move-card__icon" id="computer-icon" aria-hidden="true">?</span>
+            <strong id="computer-choice">Waiting...</strong>
+          </div>
+        </div>
+
+        <div class="result" id="result" role="status" aria-live="polite">
+          Choose rock, paper, or scissors to begin.
+        </div>
+
+        <div class="choices" aria-label="Choose your move">
+          <button class="choice-button" type="button" data-choice="rock">
+            <span class="choice-button__icon" aria-hidden="true">✊</span>
+            <span class="choice-button__name">Rock</span>
+            <span class="choice-button__hint">crushes scissors</span>
+          </button>
+          <button class="choice-button" type="button" data-choice="paper">
+            <span class="choice-button__icon" aria-hidden="true">✋</span>
+            <span class="choice-button__name">Paper</span>
+            <span class="choice-button__hint">covers rock</span>
+          </button>
+          <button class="choice-button" type="button" data-choice="scissors">
+            <span class="choice-button__icon" aria-hidden="true">✌️</span>
+            <span class="choice-button__name">Scissors</span>
+            <span class="choice-button__hint">cuts paper</span>
+          </button>
+        </div>
+
+        <button class="reset-button" id="reset-button" type="button">
+          Reset score
+        </button>
+
+        <footer class="game-footer">
+          Made by Andrew <span aria-hidden="true">•</span> Have fun!
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>

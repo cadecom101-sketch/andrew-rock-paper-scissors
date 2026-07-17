@@ -1,7 +1,13 @@
 # Andrew's Rock, Paper, Scissors Demo
 
-A beginner-friendly command-line Rock, Paper, Scissors game written in Python.
-Play one round against the computer and see who wins.
+A beginner-friendly Rock, Paper, Scissors game. Play against the computer and
+see who wins.
+
+## Play online
+
+No download or account is needed. Open the browser game here:
+
+**[Play Andrew's Rock, Paper, Scissors](https://cadecom101-sketch.github.io/andrew-rock-paper-scissors/)**
 
 ## Run the game
 
@@ -31,3 +37,8 @@ python -m unittest discover -s tests
 
 The tests use only Python's standard library, so there are no extra packages to
 install.
+
+## Browser version
+
+The shareable web game is built with plain HTML, CSS, and JavaScript. It has no
+external dependencies and works on phones, tablets, and computers.
